@@ -1,0 +1,25 @@
+# Loop para registrar 5 operações
+for i in range(5):
+    print(f"\n--- Operação PIX {i+1} ---")
+
+    # Pedindo a chave PIX
+    chave_pix = input("Digite a chave PIX: ")
+
+    # Pedindo o valor do PIX
+    valor_pix = input("Digite o valor do PIX: ")
+
+    # Abrindo o arquivo para adicionar informações
+    arquivo = open("extrato.txt", "a", encoding="utf-8")
+
+    # Gravando no arquivo
+    arquivo.write(f"Operação {i+1}\n")
+    arquivo.write(f"Chave PIX: {chave_pix}\n")
+    arquivo.write(f"Valor: R$ {valor_pix}\n")
+    arquivo.write("----------------------\n")
+
+    # Fechando o arquivo
+    arquivo.close()
+
+print("\nOperações registradas no arquivo extrato.txt")
+
+
